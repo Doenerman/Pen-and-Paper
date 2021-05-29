@@ -1,0 +1,56 @@
+\documentclass[10pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\usepackage{blindtext}
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata,shadows,positioning,shapes}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{subfiles}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{wrapfig}
+
+\begin{document}
+    \tableofcontents
+
+    % Informationen für die Spieler
+    \newpage
+    \input{"Vorab\space Information"}
+    \newpage
+    \input{Einleitung.tex}
+
+    \newpage
+    % Informationen für den Spielleiter
+    \input{Anfang.tex}
+
+    \newpage
+    \section{Orte}
+        \label{sec:locs}
+        Es folgt eine Liste von Orten, die im Laufe des Abenteuers erwähnt werden können und zu denen die Protagonisten erwartungsgemäß reisen können. Die Personen die bei den jeweiligen Orten auftauchen werden jeweils verlinkt. Zusätzlich wird natürlich erwähnt, was die Protagonisten entdecken können.
+        \input{Orte/Gefaengnis}
+
+    \newpage
+    \section{Ereignisse}
+        \label{sec:events}
+        In diesem Abschnitt gibt es eine Liste an verschiedenen Ereignisse, die der Spielleiter nutzen kann um die Protagonisten in gewisse Richtungen zu leiten. Die Ereigenisse sind unabhängig von dem was die Protagonisten.
+
+    \newpage
+    \section{Charaktere und Personen}
+        In folgenden Abschnitt können alle Charaktere die bisher genannt wurden mit Beschreibung über das Verhalten und die vorhandenen Informationen gefunden werden.
+    \input{Charaktere/Colthubor}
+    \input{"Charaktere/George\space Smith"}
+
+    \section{Sonstiges}
+    \input{"Sonstiges/Kult\space von\space Colthubor"}
+\end{document}
+
